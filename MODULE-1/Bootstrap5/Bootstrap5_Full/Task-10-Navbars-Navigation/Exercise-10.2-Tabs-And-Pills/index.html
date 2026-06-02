@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs and Pills Navigation</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .main-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .content-card {
+            border-radius: 10px;
+            min-height: 160px;
+        }
+
+        .profile-circle {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: #0d6efd;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="main-box shadow-sm p-4 mb-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                <div>
+                    <h1 class="fw-bold text-success">Learning Navigation</h1>
+                    <p class="text-muted fs-5 mb-0">
+                        Switch between dashboard sections using tabs and pills.
+                    </p>
+                </div>
+
+                <div class="profile-circle mt-3 mt-md-0">
+                    ST
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+                <h3 class="fw-bold mb-3">Course Tabs</h3>
+
+                <ul class="nav nav-tabs" id="courseTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="html-tab" data-bs-toggle="tab" data-bs-target="#htmlBox" type="button">
+                            HTML
+                        </button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="css-tab" data-bs-toggle="tab" data-bs-target="#cssBox" type="button">
+                            CSS
+                        </button>
+                    </li>
+
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="bootstrap-tab" data-bs-toggle="tab" data-bs-target="#bootstrapBox" type="button">
+                            Bootstrap
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content border border-top-0 p-4 bg-light" id="courseTabContent">
+                    <div class="tab-pane fade show active" id="htmlBox">
+                        <h4 class="fw-bold text-primary">HTML Practice</h4>
+                        <p class="text-muted mb-0">
+                            Complete forms, tables, navigation and semantic layout exercises.
+                        </p>
+                    </div>
+
+                    <div class="tab-pane fade" id="cssBox">
+                        <h4 class="fw-bold text-success">CSS Practice</h4>
+                        <p class="text-muted mb-0">
+                            Revise selectors, box model, layout and responsive media queries.
+                        </p>
+                    </div>
+
+                    <div class="tab-pane fade" id="bootstrapBox">
+                        <h4 class="fw-bold text-warning">Bootstrap Practice</h4>
+                        <p class="text-muted mb-0">
+                            Work on grid, forms, buttons, navbars and components.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+                <h3 class="fw-bold mb-3">Study Status</h3>
+
+                <ul class="nav nav-pills mb-4">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#activeBox" type="button">
+                            Active
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#pendingBox" type="button">
+                            Pending
+                        </button>
+                    </li>
+
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="pill" data-bs-target="#completedBox" type="button">
+                            Completed
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="activeBox">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="card content-card border-0 shadow-sm">
+                                    <div class="card-body p-4">
+                                        <h4 class="fw-bold text-primary">Bootstrap Module</h4>
+                                        <p class="text-muted mb-0">
+                                            Continue practicing layout and components.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="card content-card border-0 shadow-sm">
+                                    <div class="card-body p-4">
+                                        <h4 class="fw-bold text-success">JavaScript Module</h4>
+                                        <p class="text-muted mb-0">
+                                            Practice events, functions and DOM tasks.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="pendingBox">
+                        <div class="alert alert-warning mb-0">
+                            Form validation and responsive utility practice are pending.
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="completedBox">
+                        <div class="alert alert-success mb-0">
+                            HTML and CSS basics are completed.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

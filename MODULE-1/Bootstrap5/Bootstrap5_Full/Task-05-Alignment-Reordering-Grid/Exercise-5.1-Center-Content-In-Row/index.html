@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Content in Grid</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .hero-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .center-area {
+            min-height: 360px;
+            background-color: #eaf2ff;
+            border-radius: 12px;
+        }
+
+        .content-card {
+            max-width: 520px;
+            border-radius: 12px;
+        }
+
+        .small-card {
+            border-radius: 10px;
+            min-height: 140px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="hero-box shadow-sm p-4 mb-4">
+            <h1 class="fw-bold text-primary">Centered Content Layout</h1>
+            <p class="text-muted fs-5 mb-0">
+                Content is placed neatly in the center of the row both horizontally and vertically.
+            </p>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card small-card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="fw-bold text-primary">Design</h4>
+                        <p class="text-muted mb-0">
+                            Clean page section with simple spacing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card small-card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="fw-bold text-success">Layout</h4>
+                        <p class="text-muted mb-0">
+                            Cards adjust based on screen size.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card small-card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="fw-bold text-warning">Action</h4>
+                        <p class="text-muted mb-0">
+                            Bootstrap button and collapse are active.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center align-items-center center-area shadow-sm">
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="card content-card border-0 shadow mx-auto">
+                    <div class="card-body p-4 text-center">
+                        <h2 class="fw-bold">Welcome Section</h2>
+                        <p class="text-muted">
+                            This card is centered inside the row using Bootstrap alignment utilities.
+                        </p>
+
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#centerNote">
+                            Show Message
+                        </button>
+
+                        <div class="collapse mt-3" id="centerNote">
+                            <div class="alert alert-info mb-0">
+                                The content stays centered in the available space.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

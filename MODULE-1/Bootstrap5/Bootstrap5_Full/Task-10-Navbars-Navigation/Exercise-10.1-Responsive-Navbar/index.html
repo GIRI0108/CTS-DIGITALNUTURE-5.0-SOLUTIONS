@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .brand-circle {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background-color: #0d6efd;
+            color: white;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        .dashboard-card {
+            border-radius: 10px;
+            min-height: 165px;
+        }
+
+        .welcome-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <span class="brand-circle">S</span>
+                Student Portal
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#studentNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="studentNavbar">
+                <ul class="navbar-nav ms-auto me-lg-3 mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Dashboard</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Courses</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Assignments</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Reports</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search course">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+
+        <div class="welcome-box shadow-sm p-4 mb-4">
+            <h1 class="fw-bold text-primary">Welcome Back</h1>
+            <p class="text-muted fs-5 mb-0">
+                Continue your learning and manage your daily practice from the dashboard.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card dashboard-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-primary">Courses</h4>
+                        <p class="text-muted">
+                            View active modules and continue learning.
+                        </p>
+                        <button class="btn btn-primary btn-sm">Open</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card dashboard-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-success">Assignments</h4>
+                        <p class="text-muted">
+                            Check pending and completed submissions.
+                        </p>
+                        <button class="btn btn-success btn-sm">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card dashboard-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-warning">Reports</h4>
+                        <p class="text-muted">
+                            Track your weekly progress and scores.
+                        </p>
+                        <button class="btn btn-warning btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#reportBox">
+                            Check
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse mt-4" id="reportBox">
+            <div class="alert alert-info mb-0">
+                Your report section will show progress, scores and practice status.
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

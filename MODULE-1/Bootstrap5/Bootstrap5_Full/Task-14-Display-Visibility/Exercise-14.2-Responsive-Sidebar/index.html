@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .top-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .sidebar {
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 10px;
+            min-height: 420px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 9px 0;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        .content-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .info-card {
+            border-radius: 10px;
+            min-height: 150px;
+        }
+
+        .mobile-menu {
+            background-color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="top-box shadow-sm p-4 mb-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                <div>
+                    <h1 class="fw-bold text-primary">Student Workspace</h1>
+                    <p class="text-muted fs-5 mb-0">
+                        Sidebar is visible on tablets and desktops.
+                    </p>
+                </div>
+
+                <button class="btn btn-primary mt-3 mt-md-0" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+                    Menu
+                </button>
+            </div>
+        </div>
+
+        <div class="collapse mobile-menu shadow-sm p-3 mb-4 d-md-none" id="mobileMenu">
+            <a href="#" class="d-block text-decoration-none mb-2">Dashboard</a>
+            <a href="#" class="d-block text-decoration-none mb-2">Courses</a>
+            <a href="#" class="d-block text-decoration-none mb-2">Assignments</a>
+            <a href="#" class="d-block text-decoration-none">Reports</a>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-3 d-none d-md-block">
+                <div class="sidebar shadow-sm p-4">
+                    <h4 class="fw-bold mb-4">Menu</h4>
+
+                    <a href="#">Dashboard</a>
+                    <a href="#">Courses</a>
+                    <a href="#">Assignments</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Reports</a>
+                    <a href="#">Settings</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-9">
+                <div class="content-box shadow-sm p-4">
+                    <h2 class="fw-bold text-success">Dashboard Overview</h2>
+                    <p class="text-muted">
+                        The main content takes full width on mobile. From tablet screens and above,
+                        the sidebar appears on the left side.
+                    </p>
+
+                    <div class="row g-4 mt-2">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card info-card border-0 shadow-sm">
+                                <div class="card-body p-4">
+                                    <h4 class="fw-bold text-primary">Courses</h4>
+                                    <p class="text-muted mb-0">5 active modules</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card info-card border-0 shadow-sm">
+                                <div class="card-body p-4">
+                                    <h4 class="fw-bold text-warning">Pending</h4>
+                                    <p class="text-muted mb-0">2 exercises left</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4 d-none d-lg-block">
+                            <div class="card info-card border-0 shadow-sm">
+                                <div class="card-body p-4">
+                                    <h4 class="fw-bold text-success">Completed</h4>
+                                    <p class="text-muted mb-0">14 tasks done</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-success mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#workNote">
+                        View Note
+                    </button>
+
+                    <div class="collapse mt-3" id="workNote">
+                        <div class="alert alert-success mb-0">
+                            Responsive sidebar keeps the mobile layout clean and simple.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

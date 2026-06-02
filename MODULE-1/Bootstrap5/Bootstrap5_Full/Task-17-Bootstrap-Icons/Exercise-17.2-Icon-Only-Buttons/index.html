@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Buttons</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .main-card {
+            max-width: 700px;
+            margin: 60px auto;
+            border-radius: 12px;
+        }
+
+        .icon-btn {
+            width: 45px;
+            height: 45px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card main-card border-0 shadow">
+            <div class="card-body p-4">
+                <h1 class="fw-bold text-primary">Course Actions</h1>
+                <p class="text-muted">
+                    Text buttons are replaced with icon-only action buttons.
+                </p>
+
+                <div class="d-flex flex-wrap gap-2 mb-4">
+                    <button class="btn btn-primary icon-btn" title="Home">
+                        <i class="bi bi-house-door"></i>
+                    </button>
+
+                    <button class="btn btn-success icon-btn" title="Save">
+                        <i class="bi bi-save"></i>
+                    </button>
+
+                    <button class="btn btn-warning icon-btn" title="Edit">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+
+                    <button class="btn btn-danger icon-btn" title="Delete">
+                        <i class="bi bi-trash"></i>
+                    </button>
+
+                    <button class="btn btn-dark icon-btn" title="Settings">
+                        <i class="bi bi-gear"></i>
+                    </button>
+                </div>
+
+                <button class="btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#iconNote">
+                    Show Details
+                </button>
+
+                <div class="collapse mt-3" id="iconNote">
+                    <div class="alert alert-info mb-0">
+                        Icon buttons are useful for compact dashboard actions.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

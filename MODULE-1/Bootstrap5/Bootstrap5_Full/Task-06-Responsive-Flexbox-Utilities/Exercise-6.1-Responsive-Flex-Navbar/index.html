@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flex Navbar</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .top-bar {
+            background-color: #ffffff;
+            border-radius: 10px;
+        }
+
+        .nav-link-box {
+            text-decoration: none;
+            color: #333333;
+            padding: 8px 14px;
+            border-radius: 6px;
+        }
+
+        .nav-link-box:hover {
+            background-color: #eaf2ff;
+            color: #0d6efd;
+        }
+
+        .dashboard-card {
+            border-radius: 10px;
+            min-height: 170px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="top-bar shadow-sm p-4 mb-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                <div>
+                    <h2 class="fw-bold text-primary mb-1">Student Portal</h2>
+                    <p class="text-muted mb-0">Manage learning activities in one place.</p>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row gap-2 mt-3 mt-md-0">
+                    <a href="#" class="nav-link-box">Home</a>
+                    <a href="#" class="nav-link-box">Courses</a>
+                    <a href="#" class="nav-link-box">Assignments</a>
+                    <a href="#" class="nav-link-box">Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card dashboard-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-primary">Active Courses</h4>
+                        <p class="text-muted">Continue your current learning modules.</p>
+                        <button class="btn btn-primary btn-sm">Open</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card dashboard-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-success">Assignments</h4>
+                        <p class="text-muted">Check pending work and submissions.</p>
+                        <button class="btn btn-success btn-sm">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card dashboard-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-warning">Progress</h4>
+                        <p class="text-muted">Track your weekly learning status.</p>
+                        <button class="btn btn-warning btn-sm">Check</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-outline-primary mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#menuNote">
+            Show Note
+        </button>
+
+        <div class="collapse mt-3" id="menuNote">
+            <div class="alert alert-info">
+                The navigation changes from vertical on mobile to horizontal on larger screens.
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

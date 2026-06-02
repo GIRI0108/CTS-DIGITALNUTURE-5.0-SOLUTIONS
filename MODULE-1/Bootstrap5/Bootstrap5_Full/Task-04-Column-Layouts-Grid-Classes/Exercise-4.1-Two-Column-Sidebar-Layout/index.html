@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .header-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .sidebar {
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 10px;
+            min-height: 360px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 9px 0;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        .content-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .summary-card {
+            border-radius: 10px;
+            min-height: 130px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="header-box shadow-sm p-4 mb-4">
+            <h1 class="fw-bold text-primary">Student Dashboard</h1>
+            <p class="text-muted fs-5 mb-0">
+                A simple page layout with sidebar navigation and main content area.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="sidebar shadow-sm p-4">
+                    <h4 class="fw-bold mb-4">Menu</h4>
+
+                    <a href="#">Overview</a>
+                    <a href="#">Courses</a>
+                    <a href="#">Assignments</a>
+                    <a href="#">Projects</a>
+                    <a href="#">Reports</a>
+                    <a href="#">Settings</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="content-box shadow-sm p-4">
+                    <h2 class="fw-bold">Overview</h2>
+                    <p class="text-muted">
+                        This section contains the main page content. The sidebar takes a smaller width
+                        and the content area takes a larger width on medium and larger screens.
+                    </p>
+
+                    <div class="row g-3 mt-2">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card summary-card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="fw-bold text-primary">Courses</h5>
+                                    <p class="text-muted mb-0">4 active courses</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card summary-card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="fw-bold text-success">Assignments</h5>
+                                    <p class="text-muted mb-0">6 pending works</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div class="card summary-card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="fw-bold text-warning">Progress</h5>
+                                    <p class="text-muted mb-0">82% completed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#detailsBox">
+                        View More
+                    </button>
+
+                    <div class="collapse mt-3" id="detailsBox">
+                        <div class="alert alert-info mb-0">
+                            The layout is responsive. On smaller screens, the sidebar and content stack one below another.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Typography</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .header-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .notice-box {
+            background-color: #eaf2ff;
+            border-radius: 10px;
+        }
+
+        .course-card {
+            border-radius: 10px;
+            min-height: 170px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="header-box shadow-sm p-4 mb-4">
+            <h1 class="display-1 fw-bold text-primary">Student Learning Portal</h1>
+            <p class="lead text-muted mb-0">
+                A simple dashboard page using Bootstrap typography utilities.
+            </p>
+        </div>
+
+        <div class="row g-4 align-items-center mb-4">
+            <div class="col-md-8">
+                <div class="notice-box p-4 shadow-sm">
+                    <h2 class="fw-bold">Welcome Back, Student</h2>
+                    <p class="lead mb-2">
+                        Continue your learning and complete the pending modules before the deadline.
+                    </p>
+                    <p class="text-muted mb-0">
+                        Your progress is updated based on completed exercises and practice activities.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <h3 class="display-6 fw-bold text-success">82%</h3>
+                        <p class="text-muted mb-0">Overall Progress</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card course-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-primary">Bootstrap Basics</h4>
+                        <p class="text-muted">
+                            Learn layout, spacing, components and utilities.
+                        </p>
+                        <small class="text-muted">Updated recently</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card course-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-success">JavaScript Practice</h4>
+                        <p class="text-muted">
+                            Practice DOM manipulation and event handling.
+                        </p>
+                        <small class="text-muted">2 exercises pending</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card course-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-warning">Core Java</h4>
+                        <p class="text-muted">
+                            Revise OOP, collections and exception handling.
+                        </p>
+                        <small class="text-muted">Starts this week</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn btn-primary mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#studyTip">
+            View Study Tip
+        </button>
+
+        <div class="collapse mt-3" id="studyTip">
+            <div class="alert alert-info mb-0">
+                Spend at least one focused session daily for coding practice.
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

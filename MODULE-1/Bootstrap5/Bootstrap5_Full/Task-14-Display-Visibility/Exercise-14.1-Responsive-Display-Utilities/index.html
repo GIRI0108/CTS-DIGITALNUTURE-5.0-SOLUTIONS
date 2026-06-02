@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display and Visibility</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .header-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .course-card {
+            border-radius: 10px;
+            min-height: 170px;
+        }
+
+        .desktop-panel {
+            border-radius: 10px;
+            background-color: #eaf2ff;
+        }
+
+        .mobile-box {
+            border-radius: 10px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="header-box shadow-sm p-4 mb-4">
+            <h1 class="fw-bold text-primary">Learning Dashboard</h1>
+            <p class="text-muted fs-5 mb-0">
+                Dashboard sections adjust their visibility based on screen size.
+            </p>
+        </div>
+
+        <div class="mobile-box shadow-sm p-4 mb-4 d-block d-md-none">
+            <h3 class="fw-bold text-success">Mobile View</h3>
+            <p class="text-muted mb-0">
+                A compact version is shown on smaller screens.
+            </p>
+        </div>
+
+        <div class="desktop-panel shadow-sm p-4 mb-4 d-none d-md-block">
+            <h3 class="fw-bold text-primary">Tablet and Desktop View</h3>
+            <p class="text-muted mb-0">
+                A wider dashboard section is shown from medium screens and above.
+            </p>
+        </div>
+
+        <div class="d-none d-lg-flex justify-content-between align-items-center bg-dark text-white p-4 rounded shadow-sm mb-4">
+            <div>
+                <h3 class="fw-bold mb-1">Desktop Learning Summary</h3>
+                <p class="mb-0">
+                    This horizontal summary appears only on large screens.
+                </p>
+            </div>
+
+            <button class="btn btn-light" type="button" data-bs-toggle="collapse" data-bs-target="#summaryInfo">
+                View Summary
+            </button>
+        </div>
+
+        <div class="collapse mb-4" id="summaryInfo">
+            <div class="alert alert-info mb-0">
+                Display utilities help to show suitable content for different screen sizes.
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card course-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-primary">Bootstrap Practice</h4>
+                        <p class="text-muted">
+                            Continue layout and component exercises.
+                        </p>
+                        <button class="btn btn-primary btn-sm">Open</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card course-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-success">Assignments</h4>
+                        <p class="text-muted">
+                            Check pending practice submissions.
+                        </p>
+                        <button class="btn btn-success btn-sm">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 d-none d-md-block">
+                <div class="card course-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-warning">Progress Report</h4>
+                        <p class="text-muted">
+                            This card is hidden on mobile and visible on medium screens.
+                        </p>
+                        <button class="btn btn-warning btn-sm">Check</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

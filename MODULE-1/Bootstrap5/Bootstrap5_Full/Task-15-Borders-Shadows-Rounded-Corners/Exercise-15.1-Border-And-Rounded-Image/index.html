@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Utilities</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .main-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .profile-img {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            background-color: #eaf2ff;
+        }
+
+        .info-card {
+            border-radius: 10px;
+            min-height: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="main-box shadow-sm p-4 mb-4 text-center">
+            <img src="https://via.placeholder.com/300x300?text=Student" alt="Student" class="profile-img border border-primary border-3 rounded-circle mb-3">
+
+            <h1 class="fw-bold text-primary">Student Profile</h1>
+            <p class="text-muted fs-5 mb-0">
+                Profile image styled using border and rounded utilities.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="card info-card border border-success border-3 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-success">Completed</h4>
+                        <p class="text-muted mb-0">Frontend basics finished.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card info-card border border-warning border-3 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-warning">In Progress</h4>
+                        <p class="text-muted mb-0">Bootstrap utilities practice.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card info-card border border-danger border-3 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-danger">Pending</h4>
+                        <p class="text-muted mb-0">Java and SQL revision.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

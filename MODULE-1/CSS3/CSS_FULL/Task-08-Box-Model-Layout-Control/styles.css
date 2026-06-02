@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    padding: 10px;
+    background-color: #dbefff;
+    background-image: url("images/back.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+nav {
+    background-color: rgba(0, 51, 102, 0.90);
+    color: white;
+    padding: 15px;
+}
+
+nav h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navMenu {
+    list-style-type: none;
+    list-style-position: inside;
+    margin-top: 10px;
+}
+
+.navMenu li {
+    display: inline-block;
+    margin-right: 12px;
+    padding: 5px;
+}
+
+a:link {
+    color: #ffff00;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffcc66;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #00ff00;
+}
+
+main {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.88);
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #003366, #66b3ff);
+    padding: 8px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section {
+    margin: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #999999;
+}
+
+#mainHeader {
+    background: linear-gradient(to right, #004080, #4da6ff);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #003366;
+}
+
+.description {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+
+.highlight {
+    color: white;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.eventList {
+    list-style-type: square;
+    list-style-position: outside;
+    margin-top: 10px;
+    margin-left: 35px;
+    padding-left: 20px;
+}
+
+.eventList li {
+    padding: 4px 0;
+    margin-bottom: 3px;
+}
+
+.eventCard {
+    background-color: #f5f5f5;
+    border: 2px solid #777777;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.selectedCard {
+    border: 3px solid #003366;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.eventCard h3 {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    color: #003366;
+}
+
+h3,
+p {
+    line-height: 1.5;
+}
+
+p {
+    font-size: 16px;
+}
+
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.eventTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: white;
+    margin-top: 15px;
+}
+
+.eventTable th,
+.eventTable td {
+    border: 1px solid #333333;
+    padding: 10px;
+}
+
+.eventTable th {
+    background-color: #003366;
+    color: white;
+}
+
+.eventTable tr:nth-child(even) {
+    background-color: #e6f2ff;
+}
+
+.visibilityBox {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #333333;
+}
+
+.visibleBox {
+    background-color: lightgreen;
+}
+
+.hiddenBox {
+    visibility: hidden;
+    background-color: yellow;
+}
+
+.noneBox {
+    display: none;
+    background-color: pink;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid orange;
+}
+
+footer {
+    background-color: rgba(0, 51, 102, 0.90);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+td {
+    padding: 10px;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #003366;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.eventImage {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid #000000;
+    border-radius: 6px;
+}
+
+form {
+    width: 360px;
+    border: 1px solid #000000;
+    padding: 15px;
+    background-color: #f5f5f5;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+textarea {
+    height: 80px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: #0000ff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-family: 'Roboto', Arial, sans-serif;
+}

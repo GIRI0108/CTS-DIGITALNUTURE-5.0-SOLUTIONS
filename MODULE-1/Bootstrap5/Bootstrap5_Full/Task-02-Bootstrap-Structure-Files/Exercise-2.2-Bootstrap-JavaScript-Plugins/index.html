@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap JavaScript Plugins</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .main-box {
+            max-width: 950px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container main-box">
+        <div class="p-5 mb-4 bg-success text-white rounded-4 shadow">
+            <h1 class="fw-bold">Bootstrap JavaScript Plugins</h1>
+            <p class="lead mb-0">
+                This page uses bootstrap.bundle.min.js to run Bootstrap interactive components.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body">
+                        <h3 class="fw-bold">Collapse Plugin</h3>
+                        <p class="text-muted">
+                            Click the button to show or hide content using Bootstrap collapse.
+                        </p>
+
+                        <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDemo">
+                            Open Collapse
+                        </button>
+
+                        <div class="collapse mt-3" id="collapseDemo">
+                            <div class="alert alert-success mb-0">
+                                Collapse plugin is working successfully.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <div class="card-body">
+                        <h3 class="fw-bold">Modal Plugin</h3>
+                        <p class="text-muted">
+                            Click the button to open a Bootstrap modal popup.
+                        </p>
+
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#demoModal">
+                            Open Modal
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0 mt-4">
+            <div class="card-body">
+                <h3 class="fw-bold">JavaScript File Used</h3>
+                <p class="text-muted mb-2">
+                    Bootstrap JavaScript plugins are enabled using this local file:
+                </p>
+
+                <code>../../../js/bootstrap.bundle.min.js</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="demoModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Bootstrap Modal</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    Bootstrap modal plugin is working successfully.
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

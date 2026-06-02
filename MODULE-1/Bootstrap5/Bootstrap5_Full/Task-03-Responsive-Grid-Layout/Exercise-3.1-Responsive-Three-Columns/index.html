@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid Layout</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .hero-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+        }
+
+        .service-card {
+            min-height: 190px;
+            border-radius: 10px;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="hero-box shadow-sm p-4 mb-4">
+            <h1 class="fw-bold text-primary">Responsive Grid Layout</h1>
+            <p class="text-muted fs-5 mb-0">
+                The layout changes neatly for mobile, tablet and desktop screens.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card service-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="fw-bold">Web Design</h3>
+                        <p class="text-muted">
+                            A clean design section that adjusts based on the screen size.
+                        </p>
+                        <button class="btn btn-primary btn-sm" type="button">
+                            View More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card service-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="fw-bold">Development</h3>
+                        <p class="text-muted">
+                            This card moves automatically when the device width changes.
+                        </p>
+                        <button class="btn btn-success btn-sm" type="button">
+                            View More
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card service-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="fw-bold">Support</h3>
+                        <p class="text-muted">
+                            On desktop, all three cards appear in a single row.
+                        </p>
+                        <button class="btn btn-warning btn-sm" type="button">
+                            View More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

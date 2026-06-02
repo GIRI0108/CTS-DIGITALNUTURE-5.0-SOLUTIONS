@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Groups and Toggle Buttons</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .page-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .content-card {
+            border-radius: 10px;
+        }
+
+        .profile-box {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: #0d6efd;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="page-box shadow-sm p-4 mb-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                <div>
+                    <h1 class="fw-bold text-success">Learning Controls</h1>
+                    <p class="text-muted fs-5 mb-0">
+                        Button groups and toggle buttons for dashboard actions.
+                    </p>
+                </div>
+
+                <div class="profile-box mt-3 mt-md-0">
+                    ST
+                </div>
+            </div>
+        </div>
+
+        <div class="card content-card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+                <h2 class="fw-bold mb-3">Course Filter</h2>
+
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary" onclick="showMessage('All courses selected')">All</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="showMessage('Active courses selected')">Active</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="showMessage('Completed courses selected')">Completed</button>
+                    <button type="button" class="btn btn-outline-primary" onclick="showMessage('Pending courses selected')">Pending</button>
+                </div>
+
+                <p id="filterMessage" class="mt-3 text-success fw-bold"></p>
+            </div>
+        </div>
+
+        <div class="card content-card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+                <h2 class="fw-bold mb-3">Learning Preferences</h2>
+
+                <div class="d-flex flex-column flex-md-row flex-wrap gap-2">
+                    <input type="checkbox" class="btn-check" id="htmlCheck" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="htmlCheck">HTML</label>
+
+                    <input type="checkbox" class="btn-check" id="cssCheck" autocomplete="off">
+                    <label class="btn btn-outline-success" for="cssCheck">CSS</label>
+
+                    <input type="checkbox" class="btn-check" id="bootstrapCheck" autocomplete="off">
+                    <label class="btn btn-outline-warning" for="bootstrapCheck">Bootstrap</label>
+
+                    <input type="checkbox" class="btn-check" id="javaScriptCheck" autocomplete="off">
+                    <label class="btn btn-outline-danger" for="javaScriptCheck">JavaScript</label>
+                </div>
+
+                <button class="btn btn-dark mt-4" type="button" onclick="showSelectedSubjects()">
+                    Save Preferences
+                </button>
+
+                <p id="subjectMessage" class="mt-3 text-primary fw-bold"></p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6">
+                <div class="card content-card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h4 class="fw-bold text-primary">Bootstrap Module</h4>
+                                <p class="text-muted mb-0">Grid, forms, buttons and components.</p>
+                            </div>
+
+                            <button class="btn btn-primary btn-sm" type="button">
+                                Open
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card content-card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h4 class="fw-bold text-success">Practice Status</h4>
+                                <p class="text-muted mb-0">Keep track of completed exercises.</p>
+                            </div>
+
+                            <button class="btn btn-success btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#statusBox">
+                                Check
+                            </button>
+                        </div>
+
+                        <div class="collapse mt-3" id="statusBox">
+                            <div class="alert alert-success mb-0">
+                                Your practice progress is active.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showMessage(text) {
+            document.getElementById("filterMessage").innerHTML = text;
+        }
+
+        function showSelectedSubjects() {
+            let subjects = [];
+
+            if (document.getElementById("htmlCheck").checked) {
+                subjects.push("HTML");
+            }
+
+            if (document.getElementById("cssCheck").checked) {
+                subjects.push("CSS");
+            }
+
+            if (document.getElementById("bootstrapCheck").checked) {
+                subjects.push("Bootstrap");
+            }
+
+            if (document.getElementById("javaScriptCheck").checked) {
+                subjects.push("JavaScript");
+            }
+
+            if (subjects.length == 0) {
+                document.getElementById("subjectMessage").innerHTML = "No preference selected.";
+            } else {
+                document.getElementById("subjectMessage").innerHTML = "Selected: " + subjects.join(", ");
+            }
+        }
+    </script>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

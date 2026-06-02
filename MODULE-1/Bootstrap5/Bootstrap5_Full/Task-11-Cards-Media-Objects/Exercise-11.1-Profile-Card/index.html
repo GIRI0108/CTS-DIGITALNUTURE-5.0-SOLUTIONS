@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .page-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .profile-card {
+            max-width: 380px;
+            margin: auto;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .card-img-top {
+    height: 260px;
+    object-fit: cover;
+    object-position: center 20%;
+    background-color: #dbeafe;
+}
+
+        .skill-badge {
+            margin-right: 5px;
+            margin-bottom: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="page-box shadow-sm p-4 mb-4">
+            <h1 class="fw-bold text-primary">Student Profile</h1>
+            <p class="text-muted fs-5 mb-0">
+                A simple profile card for a learning dashboard.
+            </p>
+        </div>
+
+        <div class="row g-4 align-items-center">
+            <div class="col-12 col-md-5">
+                <div class="card profile-card border-0 shadow">
+                    <img src="student.jpeg" class="card-img-top" alt="Student Profile">
+
+                    <div class="card-body p-4">
+                        <h3 class="card-title fw-bold">Arun Kumar</h3>
+                        <p class="text-muted mb-2">Frontend Learning Track</p>
+
+                        <p class="card-text">
+                            Practicing Bootstrap, JavaScript and Core Java as part of the learning program.
+                        </p>
+
+                        <div class="mb-3">
+                            <span class="badge text-bg-primary skill-badge">HTML</span>
+                            <span class="badge text-bg-success skill-badge">CSS</span>
+                            <span class="badge text-bg-warning skill-badge">Bootstrap</span>
+                            <span class="badge text-bg-danger skill-badge">JavaScript</span>
+                        </div>
+
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#profileDetails">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-7">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h2 class="fw-bold text-success">Learning Summary</h2>
+                        <p class="text-muted">
+                            The student has completed basic HTML and CSS exercises and is currently working on Bootstrap components.
+                        </p>
+
+                        <div class="row g-3">
+                            <div class="col-12 col-sm-6">
+                                <div class="p-3 bg-light rounded">
+                                    <h5 class="fw-bold mb-1">Completed</h5>
+                                    <p class="text-muted mb-0">HTML, CSS basics</p>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <div class="p-3 bg-light rounded">
+                                    <h5 class="fw-bold mb-1">In Progress</h5>
+                                    <p class="text-muted mb-0">Bootstrap cards and utilities</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="collapse mt-3" id="profileDetails">
+                            <div class="alert alert-info mb-0">
+                                Profile card uses image, card body, title and action button.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

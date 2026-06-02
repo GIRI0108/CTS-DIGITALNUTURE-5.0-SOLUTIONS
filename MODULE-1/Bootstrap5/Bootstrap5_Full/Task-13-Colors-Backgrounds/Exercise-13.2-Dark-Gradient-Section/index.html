@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Gradient Section</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .hero-section {
+            border-radius: 12px;
+        }
+
+        .lesson-card {
+            border-radius: 10px;
+            min-height: 170px;
+        }
+
+        .profile-box {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            color: #212529;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="hero-section bg-dark bg-gradient text-white shadow p-5 mb-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                <div>
+                    <h1 class="fw-bold display-6">Bootstrap Learning Week</h1>
+                    <p class="lead mb-0">
+                        Revise layouts, components and utilities before moving to the next module.
+                    </p>
+                </div>
+
+                <div class="profile-box mt-4 mt-md-0">
+                    ST
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6">
+                <div class="card lesson-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-primary">Grid Practice</h4>
+                        <p class="text-muted">
+                            Work on responsive rows, columns and reordering.
+                        </p>
+                        <button class="btn btn-outline-primary btn-sm">Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="card lesson-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-success">Component Practice</h4>
+                        <p class="text-muted">
+                            Revise forms, buttons, navbar, cards and tabs.
+                        </p>
+                        <button class="btn btn-outline-success btn-sm">Open</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm mt-4">
+            <div class="card-body p-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                    <div>
+                        <h3 class="fw-bold">Weekly Reminder</h3>
+                        <p class="text-muted mb-0">
+                            Complete practice files and check responsiveness in browser.
+                        </p>
+                    </div>
+
+                    <button class="btn btn-dark mt-3 mt-md-0" type="button" data-bs-toggle="collapse" data-bs-target="#weeklyNote">
+                        Show Reminder
+                    </button>
+                </div>
+
+                <div class="collapse mt-3" id="weeklyNote">
+                    <div class="alert alert-dark mb-0">
+                        Dark gradient sections are useful for headers, banners and important announcements.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .form-box {
+            max-width: 850px;
+            margin: 50px auto;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .info-box {
+            background-color: #eaf2ff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="form-box shadow-sm p-4">
+            <div class="mb-4">
+                <h1 class="fw-bold text-primary">Student Registration</h1>
+                <p class="text-muted mb-0">
+                    Create your learning account and select your course preference.
+                </p>
+            </div>
+
+            <form>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email Address</label>
+                        <div class="input-group">
+                            <span class="input-group-text">@</span>
+                            <input type="email" class="form-control" id="email" placeholder="student@example.com">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <div class="input-group">
+                            <span class="input-group-text">+91</span>
+                            <input type="text" class="form-control" id="phone" placeholder="Enter phone number">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="course" class="form-label">Course</label>
+                        <select class="form-select" id="course">
+                            <option selected>Select course</option>
+                            <option>HTML and CSS</option>
+                            <option>JavaScript</option>
+                            <option>Bootstrap</option>
+                            <option>Core Java</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="batch" class="form-label">Batch Time</label>
+                        <select class="form-select" id="batch">
+                            <option selected>Select batch</option>
+                            <option>Morning</option>
+                            <option>Afternoon</option>
+                            <option>Evening</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="address" class="form-label">Address</label>
+                        <textarea class="form-control" id="address" rows="3" placeholder="Enter address"></textarea>
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label">Learning Mode</label>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="mode" id="onlineMode">
+                            <label class="form-check-label" for="onlineMode">
+                                Online
+                            </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="mode" id="offlineMode">
+                            <label class="form-check-label" for="offlineMode">
+                                Offline
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="terms">
+                            <label class="form-check-label" for="terms">
+                                I agree to receive course updates and reminders.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mt-4">
+                    <button type="button" class="btn btn-primary" onclick="showRegisterMessage()">
+                        Register
+                    </button>
+
+                    <button class="btn btn-outline-secondary mt-3 mt-md-0" type="button" data-bs-toggle="collapse" data-bs-target="#helpBox">
+                        Need Help?
+                    </button>
+                </div>
+            </form>
+
+            <div id="registerMessage" class="mt-3 fw-bold text-success"></div>
+
+            <div class="collapse mt-3" id="helpBox">
+                <div class="info-box p-3">
+                    Fill all required details carefully before submitting the form.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showRegisterMessage() {
+            document.getElementById("registerMessage").innerHTML = "Registration form submitted successfully.";
+        }
+    </script>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

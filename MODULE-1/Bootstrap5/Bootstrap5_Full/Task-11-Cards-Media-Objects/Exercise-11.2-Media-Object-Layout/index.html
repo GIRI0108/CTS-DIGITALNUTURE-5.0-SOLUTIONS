@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Object Layout</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .page-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .media-card {
+            border-radius: 10px;
+        }
+
+        .media-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 10px;
+            object-fit: cover;
+            background-color: #dbeafe;
+        }
+
+        .profile-circle {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: #0d6efd;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="page-box shadow-sm p-4 mb-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                <div>
+                    <h1 class="fw-bold text-success">Course Updates</h1>
+                    <p class="text-muted fs-5 mb-0">
+                        Media object style layout with image aligned to the left.
+                    </p>
+                </div>
+
+                <div class="profile-circle mt-3 mt-md-0">
+                    ST
+                </div>
+            </div>
+        </div>
+
+        <div class="card media-card border-0 shadow-sm mb-3">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-start">
+                    <img src="html.png
+                    " class="media-img me-3" alt="HTML">
+
+                    <div>
+                        <h4 class="fw-bold text-primary">HTML Practice Updated</h4>
+                        <p class="text-muted mb-2">
+                            New form and table exercises are available for practice. Complete them before moving to the next module.
+                        </p>
+                        <button class="btn btn-primary btn-sm">Open</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card media-card border-0 shadow-sm mb-3">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-start">
+                    <img src="css.png" class="media-img me-3" alt="CSS">
+
+                    <div>
+                        <h4 class="fw-bold text-success">CSS Revision</h4>
+                        <p class="text-muted mb-2">
+                            Revise selectors, box model and responsive design before starting advanced layout practice.
+                        </p>
+                        <button class="btn btn-success btn-sm">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card media-card border-0 shadow-sm">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-start">
+                    <img src="bts.jpeg" class="media-img me-3" alt="Bootstrap">
+
+                    <div>
+                        <h4 class="fw-bold text-warning">Bootstrap Components</h4>
+                        <p class="text-muted mb-2">
+                            Cards, buttons, forms and navigation exercises are ready for completion.
+                        </p>
+
+                        <button class="btn btn-warning btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#updateNote">
+                            Read More
+                        </button>
+
+                        <div class="collapse mt-3" id="updateNote">
+                            <div class="alert alert-warning mb-0">
+                                Complete the Bootstrap component exercises with clean and responsive layout.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

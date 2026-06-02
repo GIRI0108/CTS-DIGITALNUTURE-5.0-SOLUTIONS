@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Transform Utilities</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .header-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .activity-card {
+            border-radius: 10px;
+            min-height: 165px;
+        }
+
+        .profile-box {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: #0d6efd;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="header-box shadow-sm p-4 mb-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                <div>
+                    <h1 class="fw-bold text-success text-capitalize">student activity board</h1>
+                    <p class="text-muted fs-5 mb-0">
+                        Track learning activities with clean text formatting.
+                    </p>
+                </div>
+
+                <div class="profile-box mt-3 mt-md-0">
+                    ST
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card activity-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-primary text-uppercase">html practice</h4>
+                        <p class="text-muted text-capitalize">
+                            complete semantic tags and forms exercise.
+                        </p>
+                        <span class="badge text-bg-primary text-uppercase">pending</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card activity-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-success text-capitalize">css responsive design</h4>
+                        <p class="text-muted text-lowercase">
+                            MEDIA QUERY PRACTICE SHOULD BE REVIEWED.
+                        </p>
+                        <span class="badge text-bg-success text-capitalize">in progress</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card activity-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-warning text-uppercase">bootstrap layout</h4>
+                        <p class="text-muted text-capitalize">
+                            practice grid, cards, navbar and utilities.
+                        </p>
+                        <span class="badge text-bg-warning text-uppercase">new</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm mt-4">
+            <div class="card-body p-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                    <div>
+                        <h4 class="fw-bold text-capitalize">weekly reminder</h4>
+                        <p class="text-muted mb-0 text-lowercase">
+                            COMPLETE YOUR PRACTICE FILES AND KEEP THEM ORGANIZED.
+                        </p>
+                    </div>
+
+                    <button class="btn btn-success mt-3 mt-md-0" type="button" data-bs-toggle="collapse" data-bs-target="#reminderBox">
+                        Open Reminder
+                    </button>
+                </div>
+
+                <div class="collapse mt-3" id="reminderBox">
+                    <div class="alert alert-success mb-0 text-capitalize">
+                        revise important topics before starting the next module.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

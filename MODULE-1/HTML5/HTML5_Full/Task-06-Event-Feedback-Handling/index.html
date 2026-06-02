@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 6 Event Feedback</title>
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+nav {
+    background-color: lightgray;
+    padding: 15px;
+}
+
+nav a {
+    color: blue;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+section {
+    margin: 20px;
+    padding: 15px;
+}
+
+#welcomeBanner {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.highlight {
+    background-color: yellow;
+    color: black;
+    padding: 4px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: lightgray;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.eventImage {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid black;
+    border-radius: 6px;
+}
+
+form {
+    width: 360px;
+    border: 1px solid black;
+    padding: 15px;
+    background-color: #f5f5f5;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 80px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#result,
+#feeMsg,
+#submitMsg,
+#videoMsg,
+#prefMsg,
+#locationResult,
+#debugMsg {
+    color: green;
+    font-weight: bold;
+}
+
+#phoneMsg {
+    color: red;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Local Community Event Portal</h2>
+        <a href="#home">Home</a> |
+        <a href="#events">Events</a> |
+        <a href="#contact">Contact</a> |
+        <a href="help.html" target="_blank">Help</a> | <a href="#gallery">Gallery</a> | <a href="#register">Register</a> | <a href="#feedback">Feedback</a>
+    </nav>
+
+    <main>
+        <div id="welcomeBanner">
+            <h1>Welcome, Resident</h1>
+            <p>Excited to know more about the Local Community Event Portal!</p>
+            <span style="color: red; font-weight: bold;">REGISTER NOW!</span>
+        </div>
+
+        <section id="home">
+            <h2 class="highlight">Home</h2>
+            <p>This portal helps you discover local events and connect with your community.</p>
+        </section>
+
+        <section id="events">
+            <h2 class="highlight">Events</h2>
+            <ul>
+                <li>Tree Planting</li>
+                <li>Health Camp</li>
+                <li>Blood Donation</li>
+                <li>Yoga Session</li>
+            </ul>
+        </section>
+
+        <section id="gallery">
+            <h2 class="highlight">Event Gallery</h2>
+
+            <table>
+                <caption>Photos from Past Community Events</caption>
+
+                <tr>
+                    <td>
+                        <img src="images/tree.jpeg" alt="Tree Planting Event" title="Tree Planting" class="eventImage">
+                        <p>Tree Planting</p>
+                    </td>
+                    <td>
+                        <img src="images/health.jpg" alt="Health Camp Event" title="Health Camp" class="eventImage">
+                        <p>Health Camp</p>
+                    </td>
+                    <td>
+                        <img src="images/water.jpeg" alt="Water Conservation Event" title="Water Conservation" class="eventImage">
+                        <p>Water Conservation</p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="images/blood.jpeg" alt="Blood Donation Event" title="Blood Donation" class="eventImage">
+                        <p>Blood Donation</p>
+                    </td>
+                    <td>
+                        <img src="images/tamil.png" alt="Tamil Sangam Event" title="Tamil Sangam" class="eventImage">
+                        <p>Tamil Sangam</p>
+                    </td>
+                    <td>
+                        <img src="images/yoga.jpeg" alt="Yoga Session Event" title="Yoga Session" class="eventImage">
+                        <p>Yoga Session</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="register">
+            <h2 class="highlight">Event Registration Form</h2>
+
+            <form id="eventForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required autofocus>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="date">Event Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="eventType">Event Type:</label>
+                <select id="eventType" required>
+                    <option value="">Select Event</option>
+                    <option value="Tree Planting">Tree Planting</option>
+                    <option value="Health Camp">Health Camp</option>
+                    <option value="Blood Donation">Blood Donation</option>
+                    <option value="Yoga Session">Yoga Session</option>
+                </select>
+
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Enter your message"></textarea>
+
+                <button type="submit">Submit</button>
+
+                <br><br>
+                <output id="result"></output>
+            </form>
+        </section>
+
+        <section id="feedback">
+            <h2 class="highlight">Event Feedback</h2>
+
+            <form>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" placeholder="Enter 10 digit phone number" onblur="checkPhone()">
+                <p id="phoneMsg"></p>
+
+                <label for="feeEvent">Select Event:</label>
+                <select id="feeEvent" onchange="showFee()">
+                    <option value="">Select Event</option>
+                    <option value="Tree Planting">Tree Planting</option>
+                    <option value="Health Camp">Health Camp</option>
+                    <option value="Blood Donation">Blood Donation</option>
+                    <option value="Yoga Session">Yoga Session</option>
+                </select>
+                <p id="feeMsg"></p>
+
+                <label for="feedbackText">Feedback:</label>
+                <textarea id="feedbackText" placeholder="Type feedback" onkeyup="countChars()"></textarea>
+                <p>Characters: <span id="charCount">0</span></p>
+
+                <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+                <p id="submitMsg"></p>
+            </form>
+
+            <p>Double click image to enlarge.</p>
+            <img src="images/tree.jpeg" alt="Event Image" id="eventImage" class="eventImage" ondblclick="enlargeImage()">
+        </section>
+
+        <section id="contact">
+            <h2 class="highlight">Contact</h2>
+            <p>Email: abc@gmail.com</p>
+            <p>Phone: +91 xxxxxxxxxx</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Local Community Portal</p>
+    </footer>
+
+    <script>
+        var form = document.getElementById("eventForm");
+        var result = document.getElementById("result");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById("name").value;
+            var eventType = document.getElementById("eventType").value;
+
+            result.innerHTML = "Thank you " + name + ", you registered for " + eventType + ".";
+        });
+
+        function checkPhone() {
+            var phone = document.getElementById("phone").value;
+            var phoneMsg = document.getElementById("phoneMsg");
+
+            if (phone.length == 10) {
+                phoneMsg.innerHTML = "Valid phone number";
+                phoneMsg.style.color = "green";
+            } else {
+                phoneMsg.innerHTML = "Enter valid 10 digit number";
+                phoneMsg.style.color = "red";
+            }
+        }
+
+        function showFee() {
+            var eventName = document.getElementById("feeEvent").value;
+            var fee = "";
+
+            if (eventName == "Tree Planting") {
+                fee = "Free";
+            } else if (eventName == "Health Camp") {
+                fee = "₹50";
+            } else if (eventName == "Blood Donation") {
+                fee = "Free";
+            } else if (eventName == "Yoga Session") {
+                fee = "₹100";
+            }
+
+            if (fee == "") {
+                document.getElementById("feeMsg").innerHTML = "";
+            } else {
+                document.getElementById("feeMsg").innerHTML = "Event Fee: " + fee;
+            }
+        }
+
+        function submitFeedback() {
+            document.getElementById("submitMsg").innerHTML = "Thank you for your feedback!";
+        }
+
+        function enlargeImage() {
+            var image = document.getElementById("eventImage");
+            image.style.width = "350px";
+            image.style.height = "220px";
+        }
+
+        function countChars() {
+            var text = document.getElementById("feedbackText").value;
+            document.getElementById("charCount").innerHTML = text.length;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Directory Structure</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .main-box {
+            max-width: 1000px;
+            margin: 50px auto;
+        }
+
+        .folder-card {
+            min-height: 230px;
+        }
+
+        .folder-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: bold;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container main-box">
+        <div class="p-5 mb-4 bg-primary text-white rounded-4 shadow">
+            <h1 class="fw-bold">Bootstrap Structure and Files</h1>
+            <p class="lead mb-0">
+                Bootstrap project contains CSS, JS and Icons folders for styling, interactivity and icons.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card folder-card shadow-sm border-0">
+                    <div class="card-body">
+                        <div class="folder-icon bg-primary mb-3">CSS</div>
+                        <h3 class="fw-bold">CSS Folder</h3>
+                        <p class="text-muted">
+                            The CSS folder contains Bootstrap style files such as bootstrap.min.css.
+                            It is used for layout, colors, spacing, buttons, tables, forms and responsive design.
+                        </p>
+                        <span class="badge text-bg-primary">bootstrap.min.css</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card folder-card shadow-sm border-0">
+                    <div class="card-body">
+                        <div class="folder-icon bg-success mb-3">JS</div>
+                        <h3 class="fw-bold">JS Folder</h3>
+                        <p class="text-muted">
+                            The JS folder contains Bootstrap JavaScript files such as bootstrap.bundle.min.js.
+                            It supports modal, collapse, dropdown, carousel and other interactive components.
+                        </p>
+                        <span class="badge text-bg-success">bootstrap.bundle.min.js</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card folder-card shadow-sm border-0">
+                    <div class="card-body">
+                        <div class="folder-icon bg-warning mb-3">ICO</div>
+                        <h3 class="fw-bold">Icons Folder</h3>
+                        <p class="text-muted">
+                            The icons folder contains Bootstrap Icons files.
+                            Icons are used in buttons, navigation menus, social media links and user interface actions.
+                        </p>
+                        <span class="badge text-bg-warning">Bootstrap Icons</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm mt-4">
+            <div class="card-body">
+                <h4 class="fw-bold">Downloaded Bootstrap Folder Example</h4>
+
+                <pre class="bg-dark text-white p-3 rounded mt-3 mb-0">
+bootstrap/
+├── css/
+│   └── bootstrap.min.css
+├── js/
+│   └── bootstrap.bundle.min.js
+└── icons/
+    └── bootstrap-icons.css</pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

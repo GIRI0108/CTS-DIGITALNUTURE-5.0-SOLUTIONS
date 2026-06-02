@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Task 8</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            background-color: #fff3cd;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h2>Local Community Event Portal</h2>
+
+        <ul class="navMenu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#eventCards">Event Cards</a></li>
+            <li><a href="#eventObjectDetails">Event Details</a></li>
+            <li><a href="#arrayMethods">Manage Events</a></li>
+            <li><a href="#adminTable">Admin Table</a></li>
+            <li><a href="#featuredEvents">Featured Events</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#register">Register</a></li>
+            <li><a href="#registeredEvents">Registered Events</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#preference">Preference</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#debug">Debug</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="mainHeader">
+            <h1 style="color: red;">Welcome, Resident</h1>
+            <p class="description">Excited to know more about the Local Community Event Portal!</p>
+            <span style="color: red; font-weight: bold;">REGISTER NOW!</span>
+        </div>
+
+        <section id="home">
+            <h2 class="highlight">Home</h2>
+            <p class="description">This portal helps you discover local events and connect with your community.</p>
+            <button class="cta-button">Register Now</button>
+        </section>
+
+        <section id="events">
+            <h2 class="highlight">Events</h2>
+
+            <ul class="eventList">
+                <li>Tree Planting</li>
+                <li>Health Camp</li>
+                <li>Blood Donation</li>
+                <li>Yoga Session</li>
+            </ul>
+
+            <div class="cardBox">
+                <div class="eventCard">
+                    <h3>Tree Planting</h3>
+                    <p>Join the community tree planting event this weekend.</p>
+                </div>
+
+                <div class="eventCard">
+                    <h3>Health Camp</h3>
+                    <p>Free health checkup for all local residents.</p>
+                </div>
+
+                <div class="eventCard">
+                    <h3>Blood Donation</h3>
+                    <p>Donate blood and help people in need.</p>
+                </div>
+            </div>
+
+            <h2 class="highlight">Available Events</h2>
+            <p>Only upcoming events with available seats are shown below.</p>
+
+            <div class="filterBox">
+                <label for="categoryFilter">Filter by Category:</label>
+                <select id="categoryFilter" onchange="applyFilters()">
+                    <option value="All">All</option>
+                    <option value="Environment">Environment</option>
+                    <option value="Health">Health</option>
+                    <option value="Fitness">Fitness</option>
+                    <option value="Music">Music</option>
+                    <option value="Food">Food</option>
+                    <option value="Education">Education</option>
+                </select>
+
+                <label for="searchEvent">Search Event:</label>
+                <input type="text" id="searchEvent" placeholder="Type event name" onkeydown="quickSearch()">
+            </div>
+
+            <table class="eventTable">
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Category</th>
+                    <th>Fee</th>
+                    <th>Seats</th>
+                    <th>Action</th>
+                </tr>
+                <tbody id="eventsBody"></tbody>
+            </table>
+
+            <p id="hiddenEventMessage"></p>
+        </section>
+
+        <section id="eventCards">
+            <h2 class="highlight">Dynamic Event Cards</h2>
+            <p>Event cards are created dynamically using JavaScript.</p>
+            <div id="cardsContainer"></div>
+        </section>
+
+        <section id="eventObjectDetails">
+            <h2 class="highlight">Event Details</h2>
+            <p>Select an event to view details.</p>
+            <div id="objectOutput"></div>
+        </section>
+
+        <section id="arrayMethods">
+            <h2 class="highlight">Manage Events</h2>
+            <p>Add events and view event summaries.</p>
+
+            <button type="button" onclick="addEventFromPopup()">Add Event</button>
+            <button type="button" onclick="showEventSummaryCards()">Show Event Summary Cards</button>
+
+            <div id="arrayOutput"></div>
+        </section>
+
+        <section id="adminTable">
+            <h2 class="highlight">Events Admin Table</h2>
+
+            <table class="eventTable">
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Fee</th>
+                </tr>
+                <tr>
+                    <td>Tree Planting</td>
+                    <td>10 June</td>
+                    <td>City Park</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>Health Camp</td>
+                    <td>12 June</td>
+                    <td>Community Hall</td>
+                    <td>₹50</td>
+                </tr>
+                <tr>
+                    <td>Blood Donation</td>
+                    <td>15 June</td>
+                    <td>Govt School</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>Yoga Session</td>
+                    <td>18 June</td>
+                    <td>Open Ground</td>
+                    <td>₹100</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="featuredEvents">
+            <h2 class="highlight">Featured Events Layout</h2>
+
+            <div class="eventCard">
+                <h3>Tree Planting</h3>
+                <p>This event card uses margin, padding and border to show proper spacing.</p>
+            </div>
+
+            <div class="eventCard">
+                <h3>Health Camp</h3>
+                <p>This card also follows the same spacing style used in the portal.</p>
+            </div>
+
+            <form>
+                <label for="demoName">Name:</label>
+                <input type="text" id="demoName" placeholder="Click here to see outline">
+
+                <label for="demoEmail">Email:</label>
+                <input type="email" id="demoEmail" placeholder="Click here to see outline">
+            </form>
+
+            <p class="visibleText">This message is visible.</p>
+            <p class="hiddenText">This message uses visibility hidden.</p>
+            <p class="visibleText">The hidden message keeps empty space above this line.</p>
+        </section>
+
+        <section id="news">
+            <h2 class="highlight">Community Bulletin</h2>
+
+            <p class="newsArticle">
+                The city council is organizing many useful events for residents this month.
+                The upcoming programs include tree planting, health camp, blood donation,
+                water conservation awareness and yoga sessions. These events are planned
+                to bring people together and improve community participation. Residents
+                can register through the portal and check event details before visiting.
+                Volunteers are also welcome to help with event arrangements, registration
+                support and public guidance. The portal will be updated regularly with
+                event timings, locations and important announcements. Residents are encouraged
+                to check the portal often and take part in local activities.
+            </p>
+        </section>
+
+        <section id="gallery">
+            <h2 class="highlight">Event Gallery</h2>
+
+            <div class="galleryBox">
+                <div>
+                    <img src="images/tree.jpeg" alt="Tree Planting Event" title="Tree Planting" class="eventImage">
+                    <p>Tree Planting</p>
+                </div>
+
+                <div>
+                    <img src="images/health.jpg" alt="Health Camp Event" title="Health Camp" class="eventImage">
+                    <p>Health Camp</p>
+                </div>
+
+                <div>
+                    <img src="images/water.jpeg" alt="Water Conservation Event" title="Water Conservation" class="eventImage">
+                    <p>Water Conservation</p>
+                </div>
+
+                <div>
+                    <img src="images/blood.jpeg" alt="Blood Donation Event" title="Blood Donation" class="eventImage">
+                    <p>Blood Donation</p>
+                </div>
+
+                <div>
+                    <img src="images/tamil.png" alt="Tamil Sangam Event" title="Tamil Sangam" class="eventImage">
+                    <p>Tamil Sangam</p>
+                </div>
+
+                <div>
+                    <img src="images/yoga.jpeg" alt="Yoga Session Event" title="Yoga Session" class="eventImage">
+                    <p>Yoga Session</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="register">
+            <h2 class="highlight">Event Registration Form</h2>
+
+            <form id="eventForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name" required autofocus>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+
+                <label for="date">Event Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="eventType">Event Type:</label>
+                <select id="eventType" required>
+                    <option value="">Select Event</option>
+                    <option value="Tree Planting">Tree Planting</option>
+                    <option value="Health Camp">Health Camp</option>
+                    <option value="Blood Donation">Blood Donation</option>
+                    <option value="Yoga Session">Yoga Session</option>
+                    <option value="Music Night">Music Night</option>
+                    <option value="Food Festival">Food Festival</option>
+                    <option value="Workshop on Baking">Workshop on Baking</option>
+                </select>
+
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Enter your message"></textarea>
+
+                <button type="submit">Submit</button>
+
+                <br><br>
+                <output id="result"></output>
+            </form>
+        </section>
+
+        <section id="registeredEvents">
+            <h2 class="highlight">Registered Events</h2>
+            <p>After submitting the registration form, registered events will be shown here.</p>
+
+            <p id="categoryCount"></p>
+            <div id="registeredList"></div>
+            <div id="registeredDetails"></div>
+        </section>
+
+        <section id="feedback">
+            <h2 class="highlight">Event Feedback</h2>
+
+            <form>
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" placeholder="Enter 10 digit phone number">
+
+                <label for="feeEvent">Select Event:</label>
+                <select id="feeEvent">
+                    <option value="">Select Event</option>
+                    <option value="Tree Planting">Tree Planting</option>
+                    <option value="Health Camp">Health Camp</option>
+                    <option value="Blood Donation">Blood Donation</option>
+                    <option value="Yoga Session">Yoga Session</option>
+                </select>
+
+                <label for="feedbackText">Feedback:</label>
+                <textarea id="feedbackText" placeholder="Type feedback"></textarea>
+
+                <button type="button">Submit Feedback</button>
+            </form>
+        </section>
+
+        <section id="video">
+            <h2 class="highlight">Event Promo Video</h2>
+
+            <video controls>
+                <source src="videos/event-promo.mp4" type="video/mp4">
+                Your browser does not support video.
+            </video>
+        </section>
+
+        <section id="preference">
+            <h2 class="highlight">Save Event Preference</h2>
+
+            <label for="prefEvent">Preferred Event:</label>
+            <select id="prefEvent">
+                <option value="">Select Event</option>
+                <option value="Tree Planting">Tree Planting</option>
+                <option value="Health Camp">Health Camp</option>
+                <option value="Blood Donation">Blood Donation</option>
+                <option value="Yoga Session">Yoga Session</option>
+            </select>
+
+            <button type="button">Clear Preferences</button>
+        </section>
+
+        <section id="location">
+            <h2 class="highlight">Find Nearby Events</h2>
+            <button type="button">Find Nearby Events</button>
+        </section>
+
+        <section id="debug">
+            <h2 class="highlight">Debugging Practice</h2>
+            <p>Open Chrome DevTools and inspect the responsive layout.</p>
+            <button type="button">Test Debug Log</button>
+        </section>
+
+        <section id="contact">
+            <h2 class="highlight">Contact</h2>
+            <p>Email: abc@gmail.com</p>
+            <p>Phone: +91 xxxxxxxxxx</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Local Community Portal</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

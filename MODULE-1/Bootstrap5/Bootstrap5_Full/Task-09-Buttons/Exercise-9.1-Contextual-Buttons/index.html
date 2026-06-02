@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Buttons</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .page-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .button-card {
+            border-radius: 10px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="page-box shadow-sm p-4 mb-4">
+            <h1 class="fw-bold text-primary">Student Action Buttons</h1>
+            <p class="text-muted fs-5 mb-0">
+                Common buttons used for student dashboard actions.
+            </p>
+        </div>
+
+        <div class="card button-card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+                <h2 class="section-title mb-3">Filled Buttons</h2>
+
+                <div class="d-flex flex-column flex-md-row flex-wrap gap-2">
+                    <button class="btn btn-primary" type="button">Dashboard</button>
+                    <button class="btn btn-secondary" type="button">Profile</button>
+                    <button class="btn btn-success" type="button">Completed</button>
+                    <button class="btn btn-danger" type="button">Cancel</button>
+                    <button class="btn btn-warning" type="button">Pending</button>
+                    <button class="btn btn-info" type="button">Info</button>
+                    <button class="btn btn-light" type="button">Notes</button>
+                    <button class="btn btn-dark" type="button">Settings</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card button-card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+                <h2 class="section-title mb-3">Outline Buttons</h2>
+
+                <div class="d-flex flex-column flex-md-row flex-wrap gap-2">
+                    <button class="btn btn-outline-primary" type="button">Open Course</button>
+                    <button class="btn btn-outline-secondary" type="button">View Profile</button>
+                    <button class="btn btn-outline-success" type="button">Submit Work</button>
+                    <button class="btn btn-outline-danger" type="button">Remove</button>
+                    <button class="btn btn-outline-warning" type="button">Review</button>
+                    <button class="btn btn-outline-info" type="button">Details</button>
+                    <button class="btn btn-outline-dark" type="button">More</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-primary">Bootstrap Basics</h4>
+                        <p class="text-muted">Continue learning grid, buttons and utilities.</p>
+                        <button class="btn btn-primary btn-sm" type="button">Continue</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-success">Assignment</h4>
+                        <p class="text-muted">Upload completed practice files.</p>
+                        <button class="btn btn-success btn-sm" type="button">Submit</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-warning">Reminder</h4>
+                        <p class="text-muted">Check pending modules before deadline.</p>
+                        <button class="btn btn-warning btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#buttonNote">
+                            View
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse mt-4" id="buttonNote">
+            <div class="alert alert-info mb-0">
+                Buttons can be used for actions like open, submit, cancel, view and continue.
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

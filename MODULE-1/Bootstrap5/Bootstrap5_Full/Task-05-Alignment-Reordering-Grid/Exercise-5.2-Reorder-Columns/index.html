@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reorder Columns</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .hero-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .content-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .image-box {
+            min-height: 320px;
+            background-color: #dceeff;
+            border-radius: 10px;
+        }
+
+        .mini-card {
+            min-height: 150px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="hero-box shadow-sm p-4 mb-4">
+            <h1 class="fw-bold text-success">Column Reordering Layout</h1>
+            <p class="text-muted fs-5 mb-0">
+                The content and visual area change order on different screen sizes.
+            </p>
+        </div>
+
+        <div class="row g-4 mb-4">
+            <div class="col-sm-3">
+                <div class="card mini-card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="fw-bold text-primary">Profile</h4>
+                        <p class="text-muted mb-0">User details section.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card mini-card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="fw-bold text-success">Courses</h4>
+                        <p class="text-muted mb-0">Learning section.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card mini-card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="fw-bold text-warning">Projects</h4>
+                        <p class="text-muted mb-0">Project work area.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card mini-card border-0 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="fw-bold text-danger">Reports</h4>
+                        <p class="text-muted mb-0">Performance summary.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-center">
+            <div class="col-md-6 order-2 order-md-1">
+                <div class="content-box shadow-sm p-4">
+                    <h2 class="fw-bold">Learning Dashboard</h2>
+                    <p class="text-muted">
+                        On mobile, this text appears after the visual area. On medium screens and above,
+                        it appears first to create a better desktop layout.
+                    </p>
+
+                    <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#reorderNote">
+                        View Info
+                    </button>
+
+                    <div class="collapse mt-3" id="reorderNote">
+                        <div class="alert alert-success mb-0">
+                            Bootstrap ordering utilities help rearrange columns without changing the HTML structure.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 order-1 order-md-2">
+                <div class="image-box shadow-sm d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                        <h3 class="fw-bold text-primary">Visual Area</h3>
+                        <p class="text-muted mb-0">
+                            This section appears first on mobile.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

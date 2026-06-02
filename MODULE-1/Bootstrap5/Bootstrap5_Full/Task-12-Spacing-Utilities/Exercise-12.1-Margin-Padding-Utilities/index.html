@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spacing Utilities</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .top-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .module-card {
+            border-radius: 10px;
+            min-height: 170px;
+        }
+
+        .summary-box {
+            background-color: #eaf2ff;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container py-5">
+
+        <div class="top-box shadow-sm p-4 mb-4">
+            <h1 class="fw-bold text-primary">Learning Schedule</h1>
+            <p class="text-muted fs-5 mb-0">
+                Spacing utilities help to keep dashboard sections neat and readable.
+            </p>
+        </div>
+
+        <div class="summary-box shadow-sm p-2 mt-4 mb-4">
+            <div class="p-3">
+                <h3 class="fw-bold">Today&apos;s Plan</h3>
+                <p class="text-muted mb-0">
+                    Complete Bootstrap spacing practice and review the previous layout exercises.
+                </p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card module-card border-0 shadow-sm m-3">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-primary">Morning Session</h4>
+                        <p class="text-muted">
+                            Revise grid layout and flex utilities.
+                        </p>
+                        <button class="btn btn-primary btn-sm">Start</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card module-card border-0 shadow-sm m-3">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-success">Afternoon Practice</h4>
+                        <p class="text-muted">
+                            Work on forms, buttons and navbar examples.
+                        </p>
+                        <button class="btn btn-success btn-sm">Open</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card module-card border-0 shadow-sm m-3">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-warning">Evening Review</h4>
+                        <p class="text-muted">
+                            Check completed exercises and organize files.
+                        </p>
+                        <button class="btn btn-warning btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#reviewBox">
+                            View
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse mt-4" id="reviewBox">
+            <div class="alert alert-info mb-0 p-2">
+                Practice files should be kept inside the correct exercise folders.
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm mt-4">
+            <div class="card-body py-5 text-center">
+                <h3 class="fw-bold text-success">Keep Practicing</h3>
+                <p class="text-muted mb-0">
+                    Proper margin and padding make the layout look clean on all screen sizes.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

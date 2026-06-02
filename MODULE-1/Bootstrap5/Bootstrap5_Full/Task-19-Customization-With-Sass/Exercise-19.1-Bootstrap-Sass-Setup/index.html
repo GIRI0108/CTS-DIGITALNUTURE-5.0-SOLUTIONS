@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sass Setup</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .setup-card {
+            max-width: 850px;
+            margin: 50px auto;
+            border-radius: 12px;
+        }
+
+        pre {
+            background-color: #212529;
+            color: white;
+            padding: 16px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card setup-card border-0 shadow">
+            <div class="card-body p-4">
+                <h1 class="fw-bold text-primary">Bootstrap Sass Setup</h1>
+
+                <p class="text-muted fs-5">
+                    Bootstrap can be customized using Sass through npm setup.
+                </p>
+
+                <h4 class="fw-bold mt-4">Commands</h4>
+
+                <pre>npm init -y
+npm install bootstrap sass
+mkdir scss
+create scss/custom.scss
+npx sass scss/custom.scss css/custom.css</pre>
+
+                <h4 class="fw-bold mt-4">custom.scss</h4>
+
+                <pre>@import "../node_modules/bootstrap/scss/bootstrap";</pre>
+
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#setupNote">
+                    View Note
+                </button>
+
+                <div class="collapse mt-3" id="setupNote">
+                    <div class="alert alert-info mb-0">
+                        After compiling Sass, link the generated CSS file in the HTML page.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

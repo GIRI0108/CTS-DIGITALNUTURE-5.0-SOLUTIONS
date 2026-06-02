@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow and Rounded Card</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .learning-card {
+            max-width: 650px;
+            margin: 60px auto;
+            border-radius: 14px;
+        }
+
+        .small-pill {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card learning-card shadow-lg border-0">
+            <div class="card-body p-5">
+                <span class="badge text-bg-primary rounded-pill px-3 py-2 mb-3 small-pill">
+                    Learning Plan
+                </span>
+
+                <h1 class="fw-bold text-primary">Bootstrap Practice</h1>
+
+                <p class="text-muted fs-5">
+                    Revise cards, utilities, buttons, spacing and responsive layout before moving to the next module.
+                </p>
+
+                <div class="d-flex flex-column flex-md-row gap-2 mt-4">
+                    <button class="btn btn-primary rounded-pill px-4">
+                        Continue
+                    </button>
+
+                    <button class="btn btn-outline-primary rounded-pill px-4" type="button" data-bs-toggle="collapse" data-bs-target="#practiceNote">
+                        View Note
+                    </button>
+                </div>
+
+                <div class="collapse mt-4" id="practiceNote">
+                    <div class="alert alert-info mb-0 shadow-sm rounded">
+                        Large shadow and rounded-pill make important cards and buttons stand out.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

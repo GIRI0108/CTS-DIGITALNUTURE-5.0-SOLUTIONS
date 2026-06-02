@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .page-box {
+            max-width: 850px;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container page-box">
+
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+                <h1 class="fw-bold text-success">Learning FAQ</h1>
+                <p class="text-muted fs-5 mb-0">
+                    Accordion is used to show and hide course information.
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion shadow-sm" id="learningAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        What should I revise in Bootstrap?
+                    </button>
+                </h2>
+
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#learningAccordion">
+                    <div class="accordion-body">
+                        Revise grid, forms, buttons, navbar, cards, utilities and JavaScript plugins.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        How can I test responsiveness?
+                    </button>
+                </h2>
+
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#learningAccordion">
+                    <div class="accordion-body">
+                        Resize the browser window or use Chrome Developer Tools device toolbar.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        Why bootstrap.bundle.min.js is used?
+                    </button>
+                </h2>
+
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#learningAccordion">
+                    <div class="accordion-body">
+                        It includes Bootstrap JavaScript plugins required for modal, collapse and accordion behavior.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

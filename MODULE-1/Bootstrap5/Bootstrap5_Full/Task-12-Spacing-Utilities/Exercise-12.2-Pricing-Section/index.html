@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Section</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .header-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .price-card {
+            border-radius: 10px;
+            min-height: 430px;
+        }
+
+        .popular-card {
+            border: 2px solid #0d6efd;
+        }
+
+        .price-text {
+            font-size: 36px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container py-5">
+
+        <div class="header-box shadow-sm p-4 mb-4 text-center">
+            <h1 class="fw-bold text-primary">Learning Plans</h1>
+            <p class="text-muted fs-5 mb-0">
+                Choose a suitable practice plan for your weekly learning schedule.
+            </p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card price-card border-0 shadow-sm p-2">
+                    <div class="card-body p-4">
+                        <h3 class="fw-bold text-primary">Basic</h3>
+                        <p class="text-muted">For daily topic revision</p>
+
+                        <div class="price-text mt-4">Free</div>
+
+                        <ul class="list-unstyled mt-4 mb-4">
+                            <li class="mb-2">HTML and CSS notes</li>
+                            <li class="mb-2">Basic Bootstrap examples</li>
+                            <li class="mb-2">Weekly checklist</li>
+                        </ul>
+
+                        <button class="btn btn-outline-primary w-100 mt-4">
+                            Select Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card price-card popular-card shadow p-2">
+                    <div class="card-body p-4">
+                        <span class="badge text-bg-primary mb-3">Popular</span>
+                        <h3 class="fw-bold text-success">Practice</h3>
+                        <p class="text-muted">For regular hands-on work</p>
+
+                        <div class="price-text mt-4">₹199</div>
+
+                        <ul class="list-unstyled mt-4 mb-4">
+                            <li class="mb-2">Frontend practice tasks</li>
+                            <li class="mb-2">Bootstrap component exercises</li>
+                            <li class="mb-2">JavaScript DOM practice</li>
+                            <li class="mb-2">Progress tracking</li>
+                        </ul>
+
+                        <button class="btn btn-primary w-100 mt-4" type="button" data-bs-toggle="collapse" data-bs-target="#planInfo">
+                            Select Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card price-card border-0 shadow-sm p-2">
+                    <div class="card-body p-4">
+                        <h3 class="fw-bold text-warning">Complete</h3>
+                        <p class="text-muted">For full module preparation</p>
+
+                        <div class="price-text mt-4">₹499</div>
+
+                        <ul class="list-unstyled mt-4 mb-4">
+                            <li class="mb-2">HTML, CSS and Bootstrap</li>
+                            <li class="mb-2">JavaScript and SQL practice</li>
+                            <li class="mb-2">Core Java revision</li>
+                            <li class="mb-2">Assessment checklist</li>
+                        </ul>
+
+                        <button class="btn btn-outline-warning w-100 mt-4">
+                            Select Plan
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse mt-4" id="planInfo">
+            <div class="alert alert-success mb-0 p-3">
+                Practice plan selected. Continue with regular exercises and revision.
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

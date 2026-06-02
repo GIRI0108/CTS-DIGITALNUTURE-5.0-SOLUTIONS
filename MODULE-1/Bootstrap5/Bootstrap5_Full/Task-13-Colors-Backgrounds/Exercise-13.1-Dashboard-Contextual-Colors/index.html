@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Colors</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .top-card {
+            border-radius: 10px;
+        }
+
+        .status-card {
+            border-radius: 10px;
+            min-height: 160px;
+        }
+
+        .profile-circle {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            color: #0d6efd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="top-card bg-primary text-white shadow-sm p-4 mb-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                <div>
+                    <h1 class="fw-bold">Student Dashboard</h1>
+                    <p class="mb-0">
+                        Track your course progress, assignments and learning status.
+                    </p>
+                </div>
+
+                <div class="profile-circle mt-3 mt-md-0">
+                    ST
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card status-card bg-success text-white border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold">Completed</h4>
+                        <p class="mb-2">8 exercises finished</p>
+                        <button class="btn btn-light btn-sm">View</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card status-card bg-warning text-dark border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold">Pending</h4>
+                        <p class="mb-2">3 exercises pending</p>
+                        <button class="btn btn-dark btn-sm">Check</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card status-card bg-info text-dark border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold">Practice</h4>
+                        <p class="mb-2">Bootstrap module active</p>
+                        <button class="btn btn-primary btn-sm">Open</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card status-card bg-danger text-white border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold">Deadline</h4>
+                        <p class="mb-2">Submit files soon</p>
+                        <button class="btn btn-light btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#deadlineBox">
+                            Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse mt-4" id="deadlineBox">
+            <div class="alert alert-danger mb-0">
+                Keep all exercise folders organized before final submission.
+            </div>
+        </div>
+
+        <div class="card border-0 shadow-sm mt-4">
+            <div class="card-body p-4">
+                <h3 class="fw-bold text-primary">Learning Progress</h3>
+                <p class="text-muted">
+                    Contextual background colors help highlight important dashboard information clearly.
+                </p>
+
+                <div class="progress mt-3">
+                    <div class="progress-bar bg-success" style="width: 75%;">
+                        75%
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

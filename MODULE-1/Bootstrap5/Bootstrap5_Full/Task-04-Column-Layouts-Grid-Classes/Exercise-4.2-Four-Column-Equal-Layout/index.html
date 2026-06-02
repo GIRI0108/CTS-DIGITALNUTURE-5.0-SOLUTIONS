@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Column Layout</title>
+
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .header-box {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .feature-card {
+            min-height: 190px;
+            border-radius: 10px;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-5">
+
+        <div class="header-box shadow-sm p-4 mb-4">
+            <h1 class="fw-bold text-success">Learning Modules</h1>
+            <p class="text-muted fs-5 mb-0">
+                Four equal sections arranged in a responsive grid layout.
+            </p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-sm-3">
+                <div class="card feature-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-primary">HTML</h4>
+                        <p class="text-muted">
+                            Learn the basic structure used to build web pages.
+                        </p>
+                        <button class="btn btn-outline-primary btn-sm" type="button">
+                            Open
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card feature-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-success">CSS</h4>
+                        <p class="text-muted">
+                            Style pages using colors, spacing and layouts.
+                        </p>
+                        <button class="btn btn-outline-success btn-sm" type="button">
+                            Open
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card feature-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-warning">Bootstrap</h4>
+                        <p class="text-muted">
+                            Build responsive layouts using ready-made classes.
+                        </p>
+                        <button class="btn btn-outline-warning btn-sm" type="button">
+                            Open
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3">
+                <div class="card feature-card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h4 class="fw-bold text-danger">JavaScript</h4>
+                        <p class="text-muted">
+                            Add interaction and dynamic behavior to web pages.
+                        </p>
+                        <button class="btn btn-outline-danger btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#jsNote">
+                            Open
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse mt-4" id="jsNote">
+            <div class="alert alert-success">
+                Bootstrap JavaScript is connected and working.
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../../js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

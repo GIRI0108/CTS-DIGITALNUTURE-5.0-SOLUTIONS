@@ -1,0 +1,29 @@
+[
+    {
+        "code": "food",
+        "name": "Food Festival",
+        "date": "2026-06-22",
+        "location": "Community Ground",
+        "category": "Food",
+        "fee": "₹80",
+        "seats": 18
+    },
+    {
+        "code": "coding",
+        "name": "Coding Workshop",
+        "date": "2026-06-24",
+        "location": "Library Hall",
+        "category": "Education",
+        "fee": "₹120",
+        "seats": 25
+    },
+    {
+        "code": "music2",
+        "name": "Evening Music Show",
+        "date": "2026-06-28",
+        "location": "Town Hall",
+        "category": "Music",
+        "fee": "₹150",
+        "seats": 30
+    }
+]
